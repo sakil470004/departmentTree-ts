@@ -1,8 +1,11 @@
-import React from 'react'
+
+import TableComponent from '../../components/TableComonent/TableComponent'
 
 function Details() {
   return (
-    <div>Details</div>
+    <div>
+      <TableComponent />
+    </div>
   )
 }
 
