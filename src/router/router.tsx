@@ -3,7 +3,6 @@ import HomePage from './../pages/Home/Home.tsx'
 import PrivateRoute from './PrivateRoute/PrivateRoute.tsx';
 import Details from './../pages/Details/Details.tsx';
 import ErrorPage from '../pages/ErrorPage/ErrorPage.tsx';
-import LoadingSpinner from '../components/LoadingSpinner.tsx';
 
 export const router = createBrowserRouter([
   {

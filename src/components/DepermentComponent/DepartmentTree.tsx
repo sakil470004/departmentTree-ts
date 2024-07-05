@@ -1,18 +1,8 @@
 // src/DepartmentTree.tsx
 import React, { useEffect, useState } from 'react';
 import { Department } from './../../DataModel/Department'
-import './DepartmentTree.css'; // Create this CSS file for styling
+import './DepartmentTree.css'; 
 
-// const departments: Department[] = [
-//   {
-//     department: 'customer_service',
-//     sub_departments: ['support', 'customer_success']
-//   },
-//   {
-//     department: 'design',
-//     sub_departments: ['graphic_design', 'product_design', 'web_design']
-//   }
-// ];
 
 const DepartmentTree: React.FC = () => {
     const [expanded, setExpanded] = useState<string[]>([]);

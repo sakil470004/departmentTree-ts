@@ -1,16 +1,33 @@
-import { Link, useRouteError } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Box, Typography, Button } from '@mui/material';
 
 const ErrorPage = () => {
-  const { error, status } = useRouteError();
-
   return (
-    <div className="container flex flex-col justify-center items-center h-screen text-center py-32">
-      <h1 className=" text-7xl font-extrabold mb-8">Error {status || 404}</h1>
-      <p className="lg:text-3xl">{error?.message}</p>
-      <button className="btn bg-red-500 text-white mt-8">
-        <Link to="/">HomePage</Link>
-      </button>
-    </div>
+    <Box 
+      display="flex" 
+      flexDirection="column" 
+      justifyContent="center" 
+      alignItems="center" 
+      height="100vh" 
+      textAlign="center" 
+      py={4}
+    >
+      <Typography variant="h1" fontWeight="bold" mb={4}>
+        Error 404
+      </Typography>
+      <Typography variant="h4" mb={2}>
+        Route Error Happened
+      </Typography>
+      <Button 
+        variant="contained" 
+        color="error"
+        component={Link}
+        to="/"
+        sx={{ mt: 4 }}
+      >
+        HomePage
+      </Button>
+    </Box>
   );
 };
 
