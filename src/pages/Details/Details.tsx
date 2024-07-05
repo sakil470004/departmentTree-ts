@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import DepartmentTree from '../../components/DepermentComponent/DepartmentTree'
 import TableComponent from '../../components/TableComonent/TableComponent'
+import ButtonAppBar from '../../components/Navbar/Navbar';
 
 function Details() {
   interface User {
@@ -10,7 +11,11 @@ function Details() {
 
   }
 
-  const [user, setUser] = useState<User>({});
+  const [user, setUser] = useState<User>({
+    name: '',
+    phoneNumber: '',
+    email: ''
+  });
   useEffect(() => {
     const user = localStorage.getItem('user')
     if (user) {
@@ -19,7 +24,8 @@ function Details() {
   }, [])
   return (
     <div style={{ padding: '3rem' }}>
-      <h1 style={{ marginBottom: '1rem' }}>Post Table ------------ Hello {user?.name} 🙋‍♂️</h1>
+      <ButtonAppBar/>
+      <h1 style={{ marginBottom: '1rem',marginTop:'2rem' }}>Post Table ------------ Hello {user?.name} 🙋‍♂️</h1>
       <TableComponent />
       <h1 style={{ margin: '2rem 0 1rem 0' }}>Department Tree</h1>
       <DepartmentTree />
