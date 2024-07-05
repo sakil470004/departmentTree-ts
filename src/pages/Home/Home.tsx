@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, TextField, Button, Typography, Box } from '@mui/material';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
@@ -9,7 +9,7 @@ export default function HomePage() {
     phoneNumber: '',
     email: ''
   });
-  const navigate=useNavigate()
+  const navigate = useNavigate()
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
@@ -47,9 +47,16 @@ export default function HomePage() {
 
     }
   };
+  useEffect(() => {
+    const user = localStorage.getItem('user')
 
+    if (user) {
+
+      navigate('/table')
+    }
+  }, [])
   return (
-    <Container sx={{minHeight:'100vh',display:'flex',alignItems:'center'}} maxWidth="sm">
+    <Container sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }} maxWidth="sm">
       <Box
         sx={{
           display: 'flex',

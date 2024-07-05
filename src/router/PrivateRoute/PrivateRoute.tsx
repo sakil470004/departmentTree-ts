@@ -11,8 +11,7 @@ function PrivateRoute({ children }: { children: ReactNode }) {
 
             navigate('/')
         }
-    }, []
-    )
+    }, [])
 
 
 

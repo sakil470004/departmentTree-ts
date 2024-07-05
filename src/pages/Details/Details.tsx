@@ -1,10 +1,22 @@
-
+import { useEffect, useState } from 'react'
+import DepartmentTree from '../../components/DepermentComponent/DepartmentTree'
 import TableComponent from '../../components/TableComonent/TableComponent'
 
 function Details() {
+  const [user, setUser] = useState({})
+  useEffect(() => {
+    const user = localStorage.getItem('user')
+    if (user) {
+      setUser(JSON.parse(user))
+    }
+  }, [])
   return (
-    <div>
+    <div style={{ padding: '3rem' }}>
+      <h1 style={{ marginBottom: '1rem' }}>Post Table ------------ Hello {user?.name} 🙋‍♂️</h1>
       <TableComponent />
+      <h1 style={{ margin: '2rem 0 1rem 0' }}>Department Tree</h1>
+      <DepartmentTree />
+
     </div>
   )
 }

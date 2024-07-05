@@ -1,0 +1,66 @@
+/* src/DepartmentTree.css */
+
+.department-tree {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    max-width: 400px;
+    background: #f4f4f4;
+    padding: 40px 20px;
+  }
+  
+  .department-item{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    gap: 5px;
+    border-bottom: 2px solid black;
+    padding-bottom: 4px;
+    
+    
+  }
+  .department-item  span{
+    font-size:20px ;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .department-item input{
+    width: 15px;
+    height: 15px;
+   
+  }
+  .sub-department-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    margin-left: 36px;
+    gap: 5px;
+    border: 1px solid rgba(0, 102, 255, 0.671);
+    padding: 6px 6px;
+    
+    
+  }
+
+  
+  .department-item .btn {
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  
+
+  }
+  
+  .sub-departments {
+    margin-left: 20px;
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .sub-department-item input{
+    width: 15px;
+    height: 15px;
+  }
+  .sub-department-item span{
+    font-size: 18px;
+  }
+  
