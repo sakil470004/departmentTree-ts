@@ -49,14 +49,14 @@ export default function HomePage() {
   };
 
   return (
-    <Container maxWidth="sm">
+    <Container sx={{minHeight:'100vh',display:'flex',alignItems:'center'}} maxWidth="sm">
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           mt: 4,
-          p: 2,
+          p: 4,
           borderRadius: 2,
           boxShadow: 3,
           backgroundColor: 'white',
