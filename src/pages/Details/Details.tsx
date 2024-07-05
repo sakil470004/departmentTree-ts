@@ -3,10 +3,21 @@ import DepartmentTree from '../../components/DepermentComponent/DepartmentTree'
 import TableComponent from '../../components/TableComonent/TableComponent'
 
 function Details() {
-  const [user, setUser] = useState({})
+  interface User {
+    name: string;
+    phoneNumber: string;
+    email: string;
+
+  }
+
+  const [user, setUser] = useState<User>({
+    name: '',
+    phoneNumber: '',
+    email: ''
+  });
   useEffect(() => {
     const user = localStorage.getItem('user')
-    if (user) {
+    if (user?.name) {
       setUser(JSON.parse(user))
     }
   }, [])

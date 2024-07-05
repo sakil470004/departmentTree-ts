@@ -1,0 +1,43 @@
+[
+    {
+      "department": "customer_service",
+      "sub_departments": ["support", "customer_success"]
+    },
+    {
+      "department": "design",
+      "sub_departments": ["graphic_design", "product_design", "web_design"]
+    },
+    {
+      "department": "engineering",
+      "sub_departments": ["software_development", "quality_assurance", "devops"]
+    },
+    {
+      "department": "marketing",
+      "sub_departments": ["content_creation", "seo", "social_media"]
+    },
+    {
+      "department": "sales",
+      "sub_departments": ["direct_sales", "inside_sales", "channel_sales"]
+    },
+    {
+      "department": "finance",
+      "sub_departments": ["accounting", "financial_planning", "auditing"]
+    },
+    {
+      "department": "hr",
+      "sub_departments": ["recruitment", "employee_relations", "benefits_management"]
+    },
+    {
+      "department": "it",
+      "sub_departments": ["infrastructure", "networking", "technical_support"]
+    },
+    {
+      "department": "legal",
+      "sub_departments": ["corporate_law", "compliance", "litigation"]
+    },
+    {
+      "department": "operations",
+      "sub_departments": ["supply_chain", "logistics", "facility_management"]
+    }
+  ]
+  

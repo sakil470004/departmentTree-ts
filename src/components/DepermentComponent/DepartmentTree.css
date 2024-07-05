@@ -1,11 +1,12 @@
 /* src/DepartmentTree.css */
 
 .department-tree {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
     margin: 20px;
     max-width: 400px;
     background: #f4f4f4;
     padding: 40px 20px;
+    
   }
   
   .department-item{
@@ -14,7 +15,7 @@
     margin: 10px 0;
     gap: 5px;
     border-bottom: 2px solid black;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     
     
   }
@@ -31,7 +32,7 @@
   .sub-department-item {
     display: flex;
     align-items: center;
-    margin: 5px 0;
+    margin-bottom: 10px;
     margin-left: 36px;
     gap: 5px;
     border: 1px solid rgba(0, 102, 255, 0.671);
