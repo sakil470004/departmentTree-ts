@@ -25,17 +25,25 @@ const TableComponent: React.FC = () => {
         { field: 'userId', headerName: 'User ID', width: 150 },
         { field: 'id', headerName: 'ID', width: 150 },
         { field: 'title', headerName: 'Title', width: 300 },
-        { field: 'body', headerName: 'Body', width: 500 }
+        { field: 'body', headerName: 'Body', width: 600 }
     ];
 
     return (
-        <div style={{ height: 600, width: '100%' }}>
+        <div style={{  width: '100%' }}>
             <DataGrid
                 rows={posts}
                 columns={columns}
-                pageSize={10}
+                rowHeight={50}
                 loading={loading}
-                rowsPerPageOptions={[5, 10, 20]}
+                initialState={{
+                    pagination: {
+                      paginationModel: {
+                        pageSize: 10,
+                      },
+                    },
+                  }}
+                  pageSizeOptions={[10]}
+                  autoHeight
             />
         </div>
     );
