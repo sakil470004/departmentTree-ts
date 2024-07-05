@@ -10,14 +10,10 @@ function Details() {
 
   }
 
-  const [user, setUser] = useState<User>({
-    name: '',
-    phoneNumber: '',
-    email: ''
-  });
+  const [user, setUser] = useState<User>({});
   useEffect(() => {
     const user = localStorage.getItem('user')
-    if (user?.name) {
+    if (user) {
       setUser(JSON.parse(user))
     }
   }, [])
